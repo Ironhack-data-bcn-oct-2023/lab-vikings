@@ -6,8 +6,8 @@ def createPlayers(arr):
     vikings = []
 
     for _ in range(len(arr)//2 + 1):
-            saxon = Saxon(200, 5)
-            saxons.append(saxon)
+        saxon = Saxon(200, 5)
+        saxons.append(saxon)
 
     for _ in range(len(arr)):
         random_idx = random.randint(0, len(arr) - 1)
@@ -19,8 +19,20 @@ def createPlayers(arr):
 
 
 def addPlayers(players):
+    for x, y in zip(players[0], players[-1]):
+        war.addSaxon(x)
+        war.addViking(y)
     
-    pass
+
+def playGame():
+    i = 0
+    while len(war.saxonArmy) > 0 and len(war.vikingArmy) > 0:
+        if i%3 != 0:
+            print(war.saxonAttack())
+        else:
+            print(war.vikingAttack())
+        i += 1
+    print(war.showStatus())
 
 
 if __name__ == '__main__':
@@ -56,4 +68,5 @@ if __name__ == '__main__':
     war = War()
     players = createPlayers(names)
     addPlayers(players)
+    playGame()
 
