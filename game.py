@@ -41,7 +41,7 @@ def run_game(num_vikings, num_saxons):
         war.addSaxon(saxon)
 
     # Main game loop
-    while war.vikingArmy and war.saxonArmy:
+    while war.vikingArmy and war.saxonArmy: #Loop doesn't stop if theres army in each list
         # Randomly choose an attacker
         attacker = random.choice(["Viking", "Saxon"])
 
@@ -58,7 +58,7 @@ def run_game(num_vikings, num_saxons):
     print(outcome)
 
 # Entry point of the game
-viking_names = ["Javier", "Ricardo", "Edu", "Marco", "Marc", "Noe", "Ana", "Mira", "Martina", "Marta", "Lucia", "Claudia", "Ester", "Felix", "Pati", "Pere", "Amir", "Patricia", "Emma", "Vicotr", "Miquel", "León", "Junior", "Bego", "Fer", "Uri"]
+viking_names = ["Javier", "Ricardo", "Edu", "Marco", "Marc", "Noe", "Ana", "Mira", "Martina", "Marta", "Lucia", "Claudia", "Ester", "Felix", "Pati", "Pere", "Amir", "Patricia", "Emma", "Vicotr", "Miquel", "León", "Junior", "Bego", "Fer","Sandra", "Uri"]
 if __name__ == "__main__":
     num_vikings = 10 # Adjust the number of Vikings
     num_saxons = 30   # Adjust the number of Saxons

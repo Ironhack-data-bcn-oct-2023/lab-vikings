@@ -34,7 +34,7 @@ class Viking(Soldier):
     def battleCry(self):
         if random.random() <= 0.33:  # 33% chance for the special attack
             damage = random.randint(2, 10) #Randomly applyy between 2 and 10 damage
-            return f"📣 {self.name} has used 'battle cry' -Odin owns you all!-\n    ⚔️ Inflicts {damage} to each Saxon"
+            return f"📣 {self.name} has used 'battle cry' -Odin owns you all!-\n    ⚔️ Inflicts {damage} points of damage to each Saxon"
         return ""
 
 # Saxon
